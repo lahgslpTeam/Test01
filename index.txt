@@ -1,6 +1,10 @@
 <li>1</li>
 <li>two</li>
+<<<<<<< HEAD
 <li>otra cosa</li>
+=======
+<li>3</li>
+>>>>>>> e3268a6a1be3e9a57fbc10930e082dad4b513622
 <li>catr</li>
 <li>5 'El bulto se la come'</li>
 <li>seis</li>
