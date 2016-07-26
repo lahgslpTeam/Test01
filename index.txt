@@ -1,6 +1,6 @@
 <li>1</li>
 <li>two</li>
-<li>trois</li>
+<li>otra cosa</li>
 <li>catr</li>
 <li>5 'El bulto se la come'</li>
 <li>seis</li>
