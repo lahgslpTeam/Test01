@@ -1,10 +1,40 @@
-<li>1</li>
-<li>two</li>
-<<<<<<< HEAD
-<li>otra cosa</li>
-=======
-<li>3</li>
->>>>>>> e3268a6a1be3e9a57fbc10930e082dad4b513622
-<li>catr</li>
-<li>5 'El bulto se la come'</li>
-<li>seis</li>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Data;
+using ARTmex.CapaNegocios;
+using FirebirdSql.Data.FirebirdClient;
+
+namespace ARTmex
+{
+    public class onPedido
+    {
+        public string log = "";
+        public bool ExisteError = false; 
+        private ParametrosDB paramDB = null;
+
+        public onPedido(ParametrosDB param_DB) {
+            this.paramDB = param_DB;
+            if (param_DB == null) throw new Exception("No se debe asignar parametros nulos.");
+        }
+        
+        public DataTable Obten_maestro_dePedidos(){
+
+            FbTransaction tran= ARTmex.CapaNegocios  
+
+            this.ExisteError = false;
+            try{
+                cnPedido cnPedido = new cnPedido(this.paramDB.Cadena_deConexion);
+                return cnPedido.maestroPedidos();
+            }catch (Exception ex){
+                ExisteError = true;
+                log += Environment.NewLine + ex.Message;
+            }
+
+            return null;
+        }
+
+
+    }
+}
